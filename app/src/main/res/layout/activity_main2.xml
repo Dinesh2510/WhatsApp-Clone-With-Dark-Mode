@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/whatsapp_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff075e54"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lyt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_medium"
+            android:paddingRight="@dimen/spacing_medium">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/back_btn" />
+
+            <View
+                android:layout_width="@dimen/spacing_medium"
+                android:layout_height="0.0dip" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/showchat_image"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/rose" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_small"
+            android:paddingRight="@dimen/spacing_small">
+
+            <TextView
+                android:id="@+id/show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                app:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStartWithNavigation="10dip"
+
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:scrollbars="vertical"
+            android:scrollingCache="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1.0"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="18.0dip"
+            app:cardElevation="1.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_small"
+                android:paddingRight="@dimen/spacing_small">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="@dimen/spacing_middle"
+                    android:tint="#ff00897b"
+                    app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp" />
+
+                <EditText
+                    android:id="@+id/text_content"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/transparent"
+                    android:hint="Write a message..."
+                    android:imeOptions="actionSearch"
+                    android:padding="@dimen/spacing_middle" />
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_xmlarge"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="@dimen/spacing_middle"
+                    android:tint="#ff00897b"
+                    app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:clickable="true"
+            android:gravity="center"
+            android:tint="@android:color/white"
+            app:backgroundTint="#ff00897b"
+            app:elevation="1.0dip"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_mic_black_24dp"
+            app:useCompatPadding="false" />
+    </LinearLayout>
+</LinearLayout>

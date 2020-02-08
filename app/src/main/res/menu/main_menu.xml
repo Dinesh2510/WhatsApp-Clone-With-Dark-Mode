@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/Dark_mode"
+        android:title="New Dark Mode"/>
+    <item
+        android:id="@+id/Group"
+        android:title="New Group"/>
+    <item
+        android:id="@+id/about"
+        android:title="Whatsapp Web"/>
+
+    <item
+        android:id="@+id/Message"
+        android:title="Starred Message"/>
+
+    <item
+        android:id="@+id/Setting"
+        android:title="Setting"/>
+        <item
+            android:id="@+id/action_search"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="always|collapseActionView"
+            android:iconTint="@color/white"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
+            android:title="Search"/>
+
+</menu>

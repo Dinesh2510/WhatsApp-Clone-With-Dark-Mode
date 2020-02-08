@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">#e6e6e6</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <style name="LightMode" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#075e55</item>
+        <item name="colorPrimaryDark">#075e55</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bgColor">@color/greyish_white</item>
+        <item name="textColor">@color/text_color_light</item>
+        <item name="subtextcolor">#737373</item>
+        <item name="stts_bg">#E6E1E1</item>
+        <item name="stts_txt_row">@color/black</item>
+        <item name="call_txt_row">@color/black</item>
+        <item name="call_bg">@color/white</item>
+
+    </style>
+
+
+    <style name="DarkMode" parent="AppTheme">
+        <item name="colorPrimary">#232D36</item>
+        <item name="colorPrimaryDark">#232D36</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bgColor">#132028</item>
+        <item name="textColor">@color/white</item>
+        <item name="subtextcolor">@color/Subtextcolordrak</item>
+        <item name="stts_bg">#132028</item>
+        <item name="stts_txt_row">@color/white</item>
+        <item name="call_txt_row">@color/white</item>
+        <item name="call_bg">#132028</item>
+
+    </style>
+
+
+</resources>
